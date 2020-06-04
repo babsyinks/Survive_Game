@@ -1,0 +1,77 @@
+td {
+    border: 5px black solid;
+    height: 90px;
+    width: 90px;
+}
+
+table {
+    position: absolute;
+    top: 5px;
+    left: 390px;
+}
+
+body {
+    position: relative;
+    background: red url("images/aquarium.jpg") 100% 100% repeat;
+}
+
+table {
+    background: url("images/waterbeau.jpg") repeat;
+    border: 5px black solid;
+}
+
+.Hippo {
+    background: url("images/Hippo1.jpg") no-repeat;
+}
+
+.Lion {
+    background: url("images/Lion1.jpg") no-repeat;
+}
+
+.Middlefinger {
+    background: url("images/middlefinger1.jpg") no-repeat;
+}
+
+.Redscary {
+    background: url("images/RedScary1.jpg") no-repeat;
+}
+
+.Rex {
+    background: url("images/Rex1.jpg") no-repeat;
+}
+
+.Rexman {
+    background: url("images/rexman1.jpg") no-repeat;
+}
+
+.Rhinno {
+    background: url("images/rhinno1.jpg") no-repeat;
+}
+
+.Scary {
+    background: url("images/Scary1.jpg") no-repeat;
+}
+
+.Snake {
+    background: url("images/snake1.jpg") no-repeat;
+}
+
+.Tiger {
+    background: url("images/Tiger1.jpg") no-repeat;
+}
+
+.Blackleopard {
+    background: url("images/Black_Leopard.jpg") no-repeat;
+}
+
+.Croc {
+    background: url("images/croc1.jpg") no-repeat;
+}
+
+.Dog {
+    background: url("images/dog1.jpg") no-repeat;
+}
+
+.Explosion {
+    background: url("images/explosionx.jpg") no-repeat;
+}
