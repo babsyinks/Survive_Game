@@ -12,7 +12,7 @@ table {
 
 body {
     position: relative;
-    background: red url("images/aquarium.jpg") 100% 100% repeat;
+    background: url("images/aquarium.jpg") 100% 100% repeat;
 }
 
 table {
@@ -74,4 +74,8 @@ table {
 
 .Explosion {
     background: url("images/explosionx.jpg") no-repeat;
+}
+
+.Neutral{
+    background:none;
 }
