@@ -1,3 +1,13 @@
+var allAnimals = ['Hippo', 'Lion','Lion1', 'Redscary', 'Rex', 'Rexman', 'Scary', 'Snake', 'Snake1','Snake2',
+'Tiger','Tiger1','Tiger2','Tiger3', 'Blackleopard','Croc', 'Dog','Bear','Bear1','Bull','Crocodile','Diablo',
+'Dino','Dino1','Dino2','Dino3','Dino4','Dino5','Dino6','Dragon','Dragon1','Elephant','Godzilla','Godzilla1',
+'Godzilla2','Ghost','Monster','Rhino','Rhinno','White_Lion','Wolf','Wolf1','Zombie','Angry_Cat','Blue_Leo',
+'KingKong','KingKong1','KingKong2','KingKong3','KingKong4','KingKong5','Leopard','Leopard1','Leopard2',
+'Mammoth','Mammoth1','Panda','Puma','Saber_Tooth','Saber_Tooth1','Shark','Shark1','Shark2','Shark3','Shark4',
+'Shark5','Shark6','Vampire','WereWolf','WereWolf1','WereWolf2','WereWolf3','WereWolf4','WereWolf5','WereWolf6',
+'WereWolf7',
+]
+
 var View = {
   display: function(imgClass, id) {
     var cell = document.getElementById(id)
@@ -48,21 +58,27 @@ var Model = {
         Model.arrayOfIds.push(x)
       }
     }
-    console.log(Model.arrayOfIds)
   },
 
-  animalClasses: ['Hippo', 'Lion', 'Redscary', 'Rex', 'Rexman', 'Rhinno', 'Scary', 'Snake', 'Tiger', 'Blackleopard', 'Croc', 'Dog'],
+  setAnimals:function(){
+
+    Model.animalClasses = allAnimals.slice()
+  },
+
+  animalClasses: allAnimals.slice(), 
 
   explosion: 'Explosion',
 
-  middleFinger: 'Middlefinger'
+  cancel: 'X'
 
 }
 
 var Controller = {
   pickAnimal: function() {
     var index = Math.floor(Math.random() * Model.animalClasses.length)
-    return Model.animalClasses[index]
+    const pickedAnimal = Model.animalClasses[index]
+    Model.animalClasses.splice(index,1)
+    return pickedAnimal
   },
 
   pickACell:function(){
@@ -83,6 +99,7 @@ var Controller = {
 
 function coolFunction() {
 
+  //handle successful click on the right cell
   function myHandler() {
     isClicked = true
     View.display(Model.explosion, myId)
@@ -91,9 +108,10 @@ function coolFunction() {
     Model.levelHits++
   }
 
+  //handle unsuccessful timely click on cell
   function forTimer() {
     if (!isClicked) {
-      View.display(Model.middleFinger, myId)
+      View.display(Model.cancel, myId)
       currentCell.removeEventListener('click', myHandler)
       Model.misses++
     }
@@ -102,7 +120,7 @@ function coolFunction() {
   var isClicked = false
  
   var myId = Controller.pickACell()
-  console.log(myId)
+  
   if(myId){
 
     var animalClass = Controller.pickAnimal()
@@ -135,6 +153,7 @@ function coolFunction() {
         }
         else{
           Model.playAgain = false
+          window.location = "index.html"
         }
   }
   
@@ -158,9 +177,7 @@ function myFunction() {
           reinitialize()
         }
         else{
-          Model.speed = 2100
-          Model.hits = 0
-          reinitialize()
+          window.location = "index.html"
         }
       return
     }else if(Model.gameWon){
@@ -176,7 +193,7 @@ function myFunction() {
 }
 
 function reinitialize(){
-  //clearTimeout(timeOut)
+  Model.setAnimals()
   Model.levelHits = 0
   Model.misses = 0
   Model.gameWon = false

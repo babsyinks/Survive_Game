@@ -1,81 +1,615 @@
+.homepage_wrapper{
+background: url('images/animals.jpg');
+background-size: cover;
+}
+
+.homepage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 95vw;
+    height: 95vh;
+}
+
+.homepage a{
+    width: 25%;
+    height: 25%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.homepage button{
+width: 75%;
+height: 55%;
+font-weight: bold;
+font-size: 1.5rem;
+border-radius: 10px;
+border: 2px solid black;
+transition: all 0.6s ease-in-out;
+color: rgb(39, 2, 2);
+}
+
+@media only screen and (max-width:1100px){
+    .homepage a{
+        width:40%;
+       
+    }
+}
+
+@media only screen and (max-height:550px){
+    .homepage a{
+        height:40%;
+       
+    }
+}
+
+.homepage button:hover{
+   
+   transform: scale(1.2);
+    }
+
+.start_game{
+    margin-right: 25px;
+    background-color: rgb(121, 223, 20);
+}
+
+.instructions{
+    margin-left: 25px;
+    background-color: chocolate;
+}
+
+
+.start_game:hover{
+    background-color: rgb(92, 92, 1);
+    color:rgb(128, 243, 13);
+}
+
+.instructions:hover{
+    background-color: rgb(64, 85, 22);
+    color: rgb(223, 103, 18);
+}
+
 td {
     border: 5px black solid;
     height: 90px;
     width: 90px;
 }
 
-table {
-    position: absolute;
-    top: 5px;
-    left: 390px;
-}
 
-body {
+
+.game_body {
     position: relative;
-    background: url("images/aquarium.jpg") 100% 100% repeat;
+    background: url("images/aquarium.jpg") 100% 100% no-repeat;
+    background-size:cover;
+    width: 95vw;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 table {
-    background: url("images/waterbeau.jpg") repeat;
+    background: url("images/waterbeau.jpg") 100% 100% no-repeat;
+    background-size: cover;
     border: 5px black solid;
 }
 
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.instructions_wrapper{
+    background-color: black;
+    color: white;
+}
+
+
+.instructions_details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.instructions_details p{
+    font-size: 24px;
+    margin:8px;
+}
+
+.instructions_button{
+    margin-top: 30px;
+    width: 250px;
+    height: 80px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: all 0.6s ease-in-out;
+    color: rgb(0, 255, 229);
+    background-color: navy;
+}
+
+.instructions_button:hover{
+    transform: scale(1.2);
+    color: navy;
+    background-color: rgb(35, 168, 155);
+}
+@media only screen and (max-width:450px) and (orientation:portrait){
+    .homepage{
+        flex-direction: column;
+    }
+
+
+    .homepage a{
+        width: 80%;
+       
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    .start_game{
+        margin-right: 0px;
+        margin-bottom: 25px;
+    }
+
+    .instructions{
+        margin-left: 0px;
+        margin-top: 25px;
+    }
+}
+
+.X {
+    background: url("images/x.png") no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-height:650px) and (orientation:landscape){
+    td {
+        
+        height: 75px;
+        width: 75px;
+    }
+}
+
+@media only screen and (min-width:750px) and (min-height:350px) and (orientation:landscape){
+    td {
+        
+        height: 55px;
+        width: 55px;
+    }
+
+    .X {
+        background: url("images/x_small.png") no-repeat;
+        background-size:cover;
+    } 
+}
+
+@media only screen and (min-height:600px) and (min-width:900px) and (orientation:landscape){
+    td {
+        
+        height: 80px;
+        width: 90px;
+    }
+}
+
+@media only screen and (min-height:700px) and (orientation:landscape){
+    td {
+        
+        height: 90px;
+        width: 90px;
+    }
+}
+
+@media only screen and (max-height:300px){
+    td {
+        
+        height: 50px;
+        width: 50px;
+    }
+}
+
 .Hippo {
-    background: url("images/Hippo1.jpg") no-repeat;
+    background: url("images/hippo1.jpg") no-repeat;
+    background-size: cover;
 }
 
 .Lion {
-    background: url("images/Lion1.jpg") no-repeat;
+    background: url("images/lion.jpg") no-repeat;
+    background-size: cover;
 }
 
-.Middlefinger {
-    background: url("images/middlefinger1.jpg") no-repeat;
+.Lion1 {
+    background: url("images/lion1.jpg") no-repeat;
+    background-size: cover;
 }
 
 .Redscary {
-    background: url("images/RedScary1.jpg") no-repeat;
+    background: url("images/redscary.jpg") no-repeat;
+    background-size: cover;
 }
 
 .Rex {
-    background: url("images/Rex1.jpg") no-repeat;
+    background: url("images/rex1.jpg") no-repeat;
+    background-size: cover;
 }
 
 .Rexman {
     background: url("images/rexman1.jpg") no-repeat;
-}
-
-.Rhinno {
-    background: url("images/rhinno1.jpg") no-repeat;
+    background-size: cover;
 }
 
 .Scary {
-    background: url("images/Scary1.jpg") no-repeat;
+    background: url("images/scary.jpg") no-repeat;
+    background-size: cover;
 }
+
 
 .Snake {
-    background: url("images/snake1.jpg") no-repeat;
+    background: url("images/snake.jpg") no-repeat;
+    background-size: cover;
 }
 
-.Tiger {
-    background: url("images/Tiger1.jpg") no-repeat;
+.Snake1 {
+    background: url("images/snake1.jpg") no-repeat;
+    background-size: cover;
 }
+
+.Snake2 {
+    background: url("images/snake2.jpg") no-repeat;
+    background-size: cover;
+}
+
 
 .Blackleopard {
     background: url("images/Black_Leopard.jpg") no-repeat;
+    background-size: cover;
 }
 
 .Croc {
     background: url("images/croc1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Crocodile {
+    background: url("images/crocodile.jpg") no-repeat;
+    background-size: cover;
 }
 
 .Dog {
-    background: url("images/dog1.jpg") no-repeat;
+    background: url("images/dog.jpg") no-repeat;
+    background-size: cover;
 }
 
 .Explosion {
     background: url("images/explosionx.jpg") no-repeat;
+    background-size: cover;
 }
 
 .Neutral{
     background:none;
+}  
+
+
+
+.Angry_Cat {
+    background: url("images/angry_cat.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+.Bear {
+    background: url("images/bear.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Bear1 {
+    background: url("images/bear1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Blue_Leo {
+    background: url("images/blue_leo.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Bull {
+    background: url("images/bull.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Diablo {
+    background: url("images/diablo.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Dino {
+    background: url("images/dino.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Dino1 {
+    background: url("images/dino1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Dino2 {
+    background: url("images/dino2.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Dino3 {
+    background: url("images/dino3.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Dino4 {
+    background: url("images/dino4.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Dino5 {
+    background: url("images/dino5.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Dino6 {
+    background: url("images/dino6.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Dragon {
+    background: url("images/dragon.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Dragon1 {
+    background: url("images/dragon1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Elephant {
+    background: url("images/elephant.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Ghost {
+    background: url("images/ghost.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Godzilla {
+    background: url("images/godzilla.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Godzilla1 {
+    background: url("images/godzilla1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Godzilla2 {
+    background: url("images/godzilla2.jpg") no-repeat;
+    background-size: cover;
+}
+
+.KingKong {
+    background: url("images/kingkong.jpg") no-repeat;
+    background-size: cover;
+}
+
+.KingKong1 {
+    background: url("images/kingkong1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.KingKong2 {
+    background: url("images/kingkong2.jpg") no-repeat;
+    background-size: cover;
+}
+
+.KingKong3 {
+    background: url("images/kingkong3.jpg") no-repeat;
+    background-size: cover;
+}
+
+.KingKong4 {
+    background: url("images/kingkong4.jpg") no-repeat;
+    background-size: cover;
+}
+
+.KingKong5 {
+    background: url("images/kingkong5.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Leopard {
+    background: url("images/leopard.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Leopard1 {
+    background: url("images/leopard1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Leopard2 {
+    background: url("images/leopard2.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Mammoth {
+    background: url("images/mammoth.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Mammoth1 {
+    background: url("images/mammoth1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Monster {
+    background: url("images/monster.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Panda {
+    background: url("images/panda.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Puma {
+    background: url("images/puma.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Rhino {
+    background: url("images/rhino1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Rhinno {
+    background: url("images/rhinno1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Saber_Tooth {
+    background: url("images/saber_tooth.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+.Saber_Tooth1 {
+    background: url("images/saber_tooth1.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+.Shark {
+    background: url("images/shark.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Shark1 {
+    background: url("images/shark1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Shark2 {
+    background: url("images/shark2.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Shark3 {
+    background: url("images/shark3.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Shark4 {
+    background: url("images/shark4.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Shark5 {
+    background: url("images/shark5.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Shark6 {
+    background: url("images/shark6.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Tiger {
+    background: url("images/tiger.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Tiger1 {
+    background: url("images/tiger1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Tiger2 {
+    background: url("images/tiger2.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Tiger3 {
+    background: url("images/tiger3.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Vampire {
+    background: url("images/vampire.jpg") no-repeat;
+    background-size: cover;
+}
+
+.WereWolf {
+    background: url("images/WereWolf.jpg") no-repeat;
+    background-size: cover;
+}
+
+.WereWolf1 {
+    background: url("images/WereWolf1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.WereWolf2 {
+    background: url("images/WereWolf2.jpg") no-repeat;
+    background-size: cover;
+}
+
+.WereWolf3 {
+    background: url("images/WereWolf3.jpg") no-repeat;
+    background-size: cover;
+}
+
+.WereWolf4 {
+    background: url("images/WereWolf4.jpg") no-repeat;
+    background-size: cover;
+}
+
+.WereWolf5 {
+    background: url("images/WereWolf5.jpg") no-repeat;
+    background-size: cover;
+}
+
+.WereWolf6 {
+    background: url("images/WereWolf6.jpg") no-repeat;
+    background-size: cover;
+}
+
+.WereWolf7 {
+    background: url("images/WereWolf7.jpg") no-repeat;
+    background-size: cover;
+}
+
+.White_Lion {
+    background: url("images/white_lion.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Wolf {
+    background: url("images/wolf.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Wolf1 {
+    background: url("images/wolf1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.Zombie {
+    background: url("images/zombie.jpg") no-repeat;
+    background-size: cover;
 }
